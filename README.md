@@ -1,1 +1,34 @@
-Breve.
+# O Projeto
+- Esse é o repsitório para o desenvolviemnto colaborativo do projeto final de PPSI-II (S1-2025) da Faculdade de Tecnologia Dr. Bernardino de Campos (FATEC São Roque), que consiste na landing-page e páginas acessórias para o evento FATECon HQs 2025 que será realizado entre os dias 26 e 28 de setembro, nas dependências da BRASITAL em São Roque.
+
+# QuemSomos.html
+- Borboletas Radiotivas De Santa Barbara Do Sul
+    - integrante 01 (Nome + Git-ID)
+    - integrante 02
+    - integrante 03
+    - integrante X
+- Coelhinhos Bailarinos Carnivoros
+    - integrante 01
+    - integrante 02
+    - integrante 03
+    - integrante X  
+- Elefantes Malhados Da Estrada Arco Iris
+    - integrante 01
+    - integrante 02
+    - integrante 03
+    - integrante X
+- Malignas Girafas Anas do Fim do Mundo, As
+    - integrante 01
+    - integrante 02
+    - integrante 03
+    - integrante X  
+- Pirulitos Raivosos De Acucar E Mel
+    - integrante 01
+    - integrante 02
+    - integrante 03
+    - integrante X  
+- Vinganca Dos Ursinhos Carinhosos
+    - integrante 01
+    - integrante 02
+    - integrante 03
+    - integrante X
