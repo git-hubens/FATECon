@@ -1,0 +1,24 @@
+/* Cores usadas */
+:root {
+--rosa: #E21472;
+--roxo: #4a43a3;
+--amarelo: #FFEE00;
+--laranja: #FF8800;
+--branco: #fff;
+--preto: #000;
+--rosa-escuro: #c31262;
+}
+
+/* Fontes usadas */
+body {
+font-family: 'Comic Neue', cursive;
+background-color: var(--laranja);
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Bangers', cursive;
+}
+
+p {
+    color: var(--rosa-escuro);
+}
