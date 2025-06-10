@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(228, 246, 246);
+}
+
+
+
+p{
+    color: #6a0dad;
+    font-size: 1.5rem;
+}
+
+b{
+    color: #ffc107;
+}
+
+nav{
+    
+    margin-bottom: 2em;
+}
+
+
+.navbar-brand{
+    font-size: 3em;
+   
+}
+
+small{
+    color: #ffc107;
+}
+
+
+
+
+
+/* Imagens dos wireframes */
+.img-wireframes{
+    width: 500px;
+    
+    margin-bottom: 3em;
+}
+
+
+/* reduçao das imagens */
+@media screen and (max-width:991px){
+    .img-wireframes{
+        width: 400px;
+        
+    }
+}
+
+@media screen and (max-width:767px){
+    .img-wireframes{
+        width: 300px;
+        
+    }
+}
