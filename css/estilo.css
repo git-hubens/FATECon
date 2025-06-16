@@ -278,3 +278,10 @@ a:hover {
 .hero-unit a.btn:hover {
     background-color: var(--color-gradient-start);
 }
+/* =======================Inicio Pirulitos Raivosos de Acucar e Mel======================= */
+
+.txtSize{
+  font-size: .7rem;
+}
+
+/* =======================Fim Pirulitos Raivosos de Acucar e Mel========================== */
