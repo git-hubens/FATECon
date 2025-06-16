@@ -8,9 +8,9 @@
     - integrante 03
     - integrante X
 - Coelhinhos Bailarinos Carnivoros
-    - integrante 01
-    - integrante 02
-    - integrante 03
+    - Rafael William Leme
+    - Raphael Guilherme
+    - Gustavo Francisco
     - integrante X  
 - Elefantes Malhados Da Estrada Arco Iris
     - integrante 01
