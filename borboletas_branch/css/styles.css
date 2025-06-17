@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.placeholder {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  min-height: 150px;
+  position: relative;
+}
+
+.placeholder-icon::before {
+  content: '🖼️';
+  font-size: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #aaa;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
