@@ -280,8 +280,26 @@ a:hover {
 }
 /* =======================Inicio Pirulitos Raivosos de Acucar e Mel======================= */
 
-.txtSize{
-  font-size: .7rem;
+.txtSize {
+  font-size: 1.2rem; /* Default size */
+}
+
+@media (max-width: 992px) {
+  .txtSize {
+    font-size: .5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .txtSize {
+    font-size: .6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .txtSize {
+    font-size: .8rem;
+  }
 }
 
 /* =======================Fim Pirulitos Raivosos de Acucar e Mel========================== */
