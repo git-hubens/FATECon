@@ -6,7 +6,7 @@
 /* ===========================================================
    1. :root (Modo Claro por Padrão)
    Define as variáveis globais de cores, fontes e efeitos.
-=========================================================== */
+============================================================ */
 :root {
   /* === CORES DE FUNDO E TEXTO (Modo Claro) === */
   --color-background: #F8F8F8;
