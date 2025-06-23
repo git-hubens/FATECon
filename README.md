@@ -2,7 +2,7 @@
 
 ## Estrutura do Site
 
-O site é composto por um menu principal com as seguintes seções:
+O site é composto por um menu principal com as seguintes seções: 
 
 ---
 
@@ -10,7 +10,7 @@ O site é composto por um menu principal com as seguintes seções:
 
 - Header contendo faixa com data/hora; logos; 
 - (Hero Unit; link para artistas);
-- Apresentação geral do evento (Fatecon)
+- Apresentação geral do evento (Fatecon) - Elefantes Malhados Da Estrada Arco Iris
 - Inscrições;
 - Edições anteriores (com link para cada uma);
 - Quem somos (html);
@@ -18,6 +18,8 @@ O site é composto por um menu principal com as seguintes seções:
 - Footer;
 
 ### Atrações 
+- HTML à parte;
+- Deve conter todos os itens abaixo;
 
 #### Espaço dos Artistas
 Área dedicada aos quadrinistas convidados;
@@ -26,28 +28,33 @@ O site é composto por um menu principal com as seguintes seções:
 - Competição e desfile de fantasias de personagens da cultura pop, com premiações ou reconhecimento;
 - Página para regulamentos;
 - Link para inscrições;
+- HTML à parte;
 
 #### Oficinas
 Página reservada para atividades recreativas como:
 - Batalha de desenhistas;
 - Crie seu personagem;
 - Etc.;
+- HTML à parte;
 
 #### Desenhe São Roque (Concurso)
 - Concurso de ilustrações incentivando artistas a criarem obras originais com premiação ou exposição dos trabalhos;
 - Página para regulamentos;
 - Link para inscrições;
+- HTML à parte;
 
 #### Exposição *(a definir)*
 Espaço expositivo com conteúdo ainda em planejamento. Pode incluir:
 - Expositores;
 - Food Trucks;
 - Etc.;
+- HTML à parte;
 ---
 
 ## 👥 Quem Somos
 
 ### A FATEC
+- Este item faz parte do bloco Fatecon;
 - Seção apresentando a Faculdade de Tecnologia (FATEC), organizadora do evento;
 - Seção apresentando os alunos que fizeram o site (html separado);
 
