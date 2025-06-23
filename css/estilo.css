@@ -302,4 +302,16 @@ a:hover {
   }
 }
 
+/* Estilos personalizados para o efeito hover */  
+.img-hover-effect:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-3px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .img-hover-effect {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
 /* =======================Fim Pirulitos Raivosos de Acucar e Mel========================== */
