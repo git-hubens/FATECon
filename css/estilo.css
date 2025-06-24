@@ -337,10 +337,11 @@ INICIO- MalignasGirafasAnasDoFimDOMundo
             margin-bottom: 5px;
         }
         .descricao-membro {
-            font-size: 0.95rem;
+            font-family: var(--font-family-body);
             color: #fff;
             margin-bottom: 20px;
             flex-grow: 1; /* Permite que o texto cresça e empurre os detalhes para baixo */
+            
         }
         
         
