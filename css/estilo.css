@@ -300,6 +300,20 @@ a:hover {
 }
 }
 
+/* INICIO - ALTERACOES RBNS */
+
+.titulo-central-fatecon { /*Classe para mudar o estilo do título da home */
+  font-family: var(--font-family-headings);
+  font-size: 8rem;
+  color: var(--color-text-secondary);
+  text-shadow: var(--text-outline-comics);
+  text-align: center;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* FINAL - ALTERACOES RBNS*/
+
 /* INICIO - Estilo Modal  */
 
 .modal-list {
@@ -333,7 +347,7 @@ a:hover {
 .modal-item {
 	position: relative;
 	background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; /* Aplica duas sombras (box-shadow) para dar profundidade: uma maior e mais suave, outra menor e mais escura */
 	width: 550px;
 	height: 550px;
 	padding: 8px;
