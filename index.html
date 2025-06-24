@@ -33,6 +33,7 @@
   </div>
 
   <div class="container mt-5">
+  <div class="container mt-5">
 
     <!-- Faixa: Patrocinadores (Header) -->
     <section class="sponsors-bar-header text-center py-2">
@@ -41,14 +42,21 @@
       <img src="https://placehold.co/100x40/cccccc/000000?text=Logo" alt="Logo Patrocinador 2" class="mx-2">
       <img src="https://placehold.co/100x40/cccccc/000000?text=Logo" alt="Logo Patrocinador 3" class="mx-2">
     </section>
-
     <!-- =================================================== -->
     <!-- ÁREA PRINCIPAL                                      -->
     <!-- =================================================== -->
     <header class="main-header my-4">
-      <div class="text-center">
-  <h1 class="titulo-central-fatecon">FATECon HQs</h1>
-</div>
+      <div class="d-flex justify-content-between align-items-center">
+        <h1>FATECon HQs</h1>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/fateconhqs" target="_blank" class="ms-2" aria-label="Instagram"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://web.facebook.com/fateconhqs" target="_blank" class="ms-2" aria-label="Facebook"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://bsky.app/profile/fatecon.bsky.social" target="_blank" class="ms-2" aria-label="Bluesky"><i
+              class="bi bi-bluesky"></i></a>
+        </div>
+      </div>
 
       <hr class="hr-themed">
 
@@ -70,7 +78,7 @@
       <!-- INICIO - ElefantesMalhadosNaEstradaArcoIris  -->
 
       <!-- ANTES DA DIVULGAÇÃO DOS ARTISTAS -->
-      <div class="d-flex position-relative wid">
+      <div class="d-flex position-relative fatequinho-apresentacao">
         <div class="hero-unit p-5 mt-4 rounded-3 text-center z-index-2">
           <h2>A maior convenção de quadrinhos da região está de volta!</h2>
           <p class="lead">Prepare-se para dois dias de imersão total no universo dos quadrinhos, com artistas, palestras
@@ -78,18 +86,19 @@
             atividades para toda a família.</p>
         </div>
         <img class="mt-4 top-0 end-0 img-hero" src="./img/bonequinho.png" alt="Mascote FATECon">
+        <img class="top-0 end-0 img-hero-deitado" src="./img/fatequinho.png" alt="Mascote FATECon">
       </div>
       <!-- ANTES DA DIVULGAÇÃO DOS ARTISTAS -->
 
       <!-- DEPOIS DA DIVULGAÇÃO DOS ARTISTAS -->
 
        <!-- Faixa: Modal dos artistas -->
-      <section class="modal-section py-5">
+      <!-- <section class="modal-section py-5">
         <div id="modal-list" class="modal-list">
         </div>
         <div id="modal-details" class="modal-bg">
         </div>
-      </section>
+      </section> -->
 
       <!-- FIM - ElefantesMalhadosNaEstradaArcoIris -->
 
@@ -100,7 +109,7 @@
     <main>
       <!-- Faixa: A FATECon -->
       <section id="fatecon" class="py-5">
-        <h2 class="text-center">A FATECon</h2>
+        <h2 class="text-center"></h2>
         <hr class="hr-themed">
         <!-- <p class="text-center">Aqui entra o conteúdo explicando o que é o evento.</p> -->
       </section>
@@ -116,21 +125,23 @@
           </h2>
         </div>
         <div class="card-fatecon w-50 p-4 mt-4 mb-4 rounded-3 text-center z-index-2">
-          <h3>LOREM IPSUM</h3>
+          <h3 class="text-center">A FATECon</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rem laborum reprehenderit cupiditate
             placeat, maxime ab commodi nemo voluptatibus aliquam tempore ex eius consequatur sapiente quae cumque
             adipisci numquam inventore!</p>
+            <a href="#" class="btn btn-lg mx-2">Atrações</a>
         </div>
       </section>
       <!-- FIM LOCAL E DATA -->
 
       <!-- brasital -->
 
-      <section class="d-flex flex-column align-items-center w-100 imagem-brasital">
-        <img src="./img/img-brasital.jpg" alt="Imagem panorâmica da Brasital" class="rounded">
-        <div class="texto-sobre-imagem position-absolute top-50 start-50 translate-middle text-center rounded-3">
-          <h3>BRASITAL</h3>
-          <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis corporis
+      <section class="brasital-section">
+        <hr class="hr-themed w-100">
+        <h3 class="text-center">BRASITAL</h3>
+        <div class="brasital-info">
+          <img src="./img/img-brasital.jpg" class="brasital-info-img" alt="Imagem panorâmica da Brasital" class="rounded">          
+          <p class="text-white brasital-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis corporis
             quibusdam harum
             suscipit
             facere in? Alias, eligendi assumenda. Unde, facilis? Consequuntur, facere magnam soluta cum nisi nobis ullam
@@ -140,6 +151,19 @@
 
       <!-- FIM - ElefantesMalhadosNaEstradaArcoIris -->
 
+      <!-- Faixa: Inscrições -->
+      <section id="inscricoes" class="py-5 text-center">
+        <h2>Inscrições Abertas!</h2>
+        <p>Garanta sua participação no nosso Beco dos Artistas ou traga sua loja para o nosso espaço de expositores.</p>
+        <div class="my-4">
+          <a href="#" class="btn btn-lg mx-2">Inscrição para Artistas</a>
+          <a href="#" class="btn btn-lg mx-2">Inscrição para Expositores</a>
+        </div>
+        <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+            dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
+            massa, varius a, semper congue, euismod non, mi.</small></p>
+        <hr class="hr-themed">
+      </section>
       <!-- Faixa: Inscrições -->
       <section id="inscricoes" class="py-5 text-center">
         <h2>Inscrições Abertas!</h2>
@@ -237,24 +261,34 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4 m-2 d-flex flex-column align-items-center p-2 card-fatecon">
-            <h3>ASSOCIAÇÃO DE QUADRINISTAS</h3>
-            <div class="d-flex flex-column align-items-center mt-4">
-
-              <img src="./img/associacao-quadrinistas.png"
+          <div class="col-md-4 m-2 d-flex align-items-center p-2 card-fatecon">
+              <img src="https://placehold.co/400"
                 alt="Logo da associação de quadrinistas e cartunistas do estado de São Paulo(AQC)"
-                class="rounded img-fluid">
-              <p class="text-center ms-5 me-5 mt-4 text-black  ">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Temporibus
-                praesentium ad
-                quod minima officiis deleniti velit quis! Ex consequatur saepe voluptatibus molestias nihil,
-                perspiciatis
-                veritatis cum! Modi nisi repellendus voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Recusandae sequi similique explicabo, maiores quam necessitatibus optio aperiam officia.</p>
-            </div>
+                class="rounded w-100">
           </div>
         </div>
       </section>
+    </main>
+  </div>
+      <!-- Faixa: Quem Somos -->
+      <section id="quemsomos" class="py-5">
+        <h2 class="text-center">Quem Somos</h2>
+        <p class="text-center">Conteúdo sobre a FATEC São Roque e a Associação de Quadrinistas.</p>
+      </section>
+
+      <!-- Faixa: Patrocinadores (Corpo) -->
+      <section id="patrocinadores" class="py-5">
+        <h2 class="text-center">Nossos Patrocinadores</h2>
+        <div class="text-center mt-4">
+          <!-- Logos maiores aqui -->
+          <img src="https://placehold.co/150x60/cccccc/000000?text=Patrocinador+Ouro" alt="Logo Patrocinador Ouro"
+            class="mx-3 my-2">
+          <img src="https://placehold.co/150x60/cccccc/000000?text=Patrocinador+Prata" alt="Logo Patrocinador Prata"
+            class="mx-3 my-2">
+          <img src="https://placehold.co/150x60/cccccc/000000?text=Apoio" alt="Logo Apoio" class="mx-3 my-2">
+        </div>
+      </section>
+
     </main>
   </div>
 
