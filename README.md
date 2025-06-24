@@ -6,7 +6,7 @@
     - Bianca Araujo - ambianca  (Nome + Git-ID)
     - Katia Mendes - katia-mendes
     - Sara Nagahala - saranagahara
-    - Richard Semo - Richardzin
+    - Richard Semo - Richardzin1
 - Coelhinhos Bailarinos Carnivoros
     - Rafael William Leme
     - Raphael Guilherme
