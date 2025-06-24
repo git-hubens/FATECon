@@ -128,11 +128,35 @@ h2, h3, h4, h5, h6 {
   text-shadow: var(--text-outline-inset); /* Efeito Inset/Outset por padrão */
 }
 
-h2 { font-size: 2.5rem; }
-h3 { font-size: 2rem; }
+h2 { font-size: 3.5rem; } /* aumentei - RBNS 2025-06-24 */
+h3 { font-size: 2.5rem; } /* aumentei - RBNS 2025-06-24 */
 h4 { font-size: 1.75rem; }
 h5 { font-size: 1.5rem; }
 h6 { font-size: 1.25rem; }
+
+/* Classe para mudar o estilo do título da home - RBNS 2025-06-24 */ 
+.titulo-central-fatecon { 
+  font-family: var(--font-family-headings);
+  font-size: 8rem;
+  color: var(--color-text-secondary);
+  text-shadow: var(--text-outline-comics);
+  text-align: center;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Responsividade para telas menores - RBNS 2025-06-24 */
+@media (max-width: 768px) {
+  .titulo-central-fatecon {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-central-fatecon {
+    font-size: 4rem;
+  }
+}
 
 
 /* --- Links --- */
@@ -197,7 +221,7 @@ a:hover {
   top: 5px; /* Ajuste para centralizar verticalmente */
 
   font-family: var(--font-family-headings); /* Fonte de título para mais impacto */
-  font-size: 2.8rem; /* Aumenta o tamanho, mas ainda não tá bom, vu ter que fazer uma classe específica para esse elemento. Talvez icluindo outra fonte. Vou tirar do navbar també. @git-hubens */
+  font-size: 2.8rem; /* Aumenta o tamanho, mas ainda não tá bom, vou ter que fazer uma classe específica para esse elemento. Talvez icluindo outra fonte. Vou tirar do navbar também. @git-hubens */
   font-weight: bold;
   color: var(--color-neutral-light); /* Cor clara */
   opacity: 0.7; /* Efeito "clarinho" com transparência */
@@ -225,6 +249,31 @@ a:hover {
 .navbar-toggler {
   filter: invert(1);
 }
+
+/* Aumenta o tamanho e muda a cor dos links no NAV - RBNS 2025-06-24 */
+.nav-principal .nav-link {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-text-secondary) !important;
+}
+
+/* Aplica hover com cor de destaque para os links do NAV - RBNS 2025-06-24 */
+.nav-principal .nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+/* Ajusta também a cor dos ícones sociais - RBNS 2025-06-24 */
+.social-icons i {
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: var(--color-accent);
+}
+
+
 
 /* --- Bloco com Gradiente --- */
 .gradiente-tematico {
@@ -299,20 +348,6 @@ a:hover {
   display: none;
 }
 }
-
-/* INICIO - ALTERACOES RBNS */
-
-.titulo-central-fatecon { /*Classe para mudar o estilo do título da home */
-  font-family: var(--font-family-headings);
-  font-size: 8rem;
-  color: var(--color-text-secondary);
-  text-shadow: var(--text-outline-comics);
-  text-align: center;
-  margin: 1rem auto;
-  display: block;
-}
-
-/* FINAL - ALTERACOES RBNS*/
 
 /* INICIO - Estilo Modal  */
 
