@@ -295,3 +295,63 @@ a:hover {
 }
 
 /* FIM - ElefantesMalhadosNaEstradaArcoIris */
+
+/* ================================================
+INICIO- MalignasGirafasAnasDoFimDOMundo
+============================================ */
+
+ .cartao-membro {
+             background: var(--color-accent);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px var(--cor-sombra);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%; /* Garante que os cartões tenham a mesma altura */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .cartao-membro:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+        .img-membro {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 4px solid var(--cor-destaque);
+            box-shadow: 0px 4px 60px var(--color-gradient-start);
+        }
+        .nome-membro {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--cor-principal);
+            margin-bottom: 5px;
+        }
+        .funcao-membro {
+            font-size: 1.1rem;
+            color: var(--cor-secundaria);
+            margin-bottom: 5px;
+        }
+        .descricao-membro {
+            font-size: 0.95rem;
+            color: #fff;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Permite que o texto cresça e empurre os detalhes para baixo */
+        }
+        
+        
+       
+
+        
+
+
+
+
+
+/* ========================================
+FIM- MalignasGirafasAnasDoFimDOMundo
+========================================== */
