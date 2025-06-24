@@ -3,10 +3,10 @@
 
 # QuemSomos.html
 - Borboletas Radiotivas De Santa Barbara Do Sul
-    - integrante 01 (Nome + Git-ID)
-    - integrante 02
-    - integrante 03
-    - integrante X
+    - Bianca Araujo - ambianca  (Nome + Git-ID)
+    - Katia Mendes - katia-mendes
+    - Sara Nagahala - saranagahara
+    - Richard Semo - Richardzin
 - Coelhinhos Bailarinos Carnivoros
     - Rafael William Leme
     - Raphael Guilherme
