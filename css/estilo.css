@@ -315,3 +315,20 @@ a:hover {
   }
 
 /* =======================Fim Pirulitos Raivosos de Acucar e Mel========================== */
+
+/* INICIO - ElefantesMalhadosNaEstradaArcoIris */
+
+.imagem-brasital {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* opcional */
+}
+
+.texto-sobre-imagem {
+  max-width: 90%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.75); /* fundo escuro translúcido para legibilidade */
+  border-radius: 0.5rem;
+}
+
+/* FIM - ElefantesMalhadosNaEstradaArcoIris */
