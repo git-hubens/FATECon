@@ -11,8 +11,10 @@
   /* === CORES DE FUNDO E TEXTO (Modo Claro) === */
   --color-background: #F8F8F8;
   --color-text-primary: #0D0D0D;
-  --color-text-secondary: #4a43a3; /* Roxo para títulos e destaques */
-  --color-text-on-accent: #F8F8F8; /* Texto claro para usar sobre fundos vibrantes */
+  --color-text-secondary: #4a43a3;
+  /* Roxo para títulos e destaques */
+  --color-text-on-accent: #F8F8F8;
+  /* Texto claro para usar sobre fundos vibrantes */
 
   /* === CORES DE AÇÃO E DESTAQUE === */
   --color-accent: #E21472;
@@ -25,8 +27,8 @@
 
   /* === GRADIENTE TEMÁTICO === */
   --color-gradient-start: #FFEE00;
-  --color-gradient-mid:   #F2A516;
-  --color-gradient-end:   #F27127;
+  --color-gradient-mid: #F2A516;
+  --color-gradient-end: #F27127;
 
   /* === TIPOGRAFIA === */
   --font-family-headings: 'Bangers', cursive;
@@ -34,18 +36,18 @@
 
   /* === EFEITOS DE TEXTO HQ === */
   /* Contorno simples para modo escuro e elementos específicos */
-  --text-outline-comics: 
+  --text-outline-comics:
     -2px -2px 0 var(--color-neutral-light),
-     2px -2px 0 var(--color-neutral-light),
-    -2px  2px 0 var(--color-neutral-light),
-     2px  2px 0 var(--color-neutral-light);
-  
+    2px -2px 0 var(--color-neutral-light),
+    -2px 2px 0 var(--color-neutral-light),
+    2px 2px 0 var(--color-neutral-light);
+
   /* Efeito "inset/outset" com gradiente para subtítulos no modo claro */
-  --text-outline-inset: 
+  --text-outline-inset:
     -2px -2px 0 var(--color-gradient-mid),
-     2px -2px 0 var(--color-gradient-mid),
-    -2px  2px 0 var(--color-gradient-start),
-     2px  2px 0 var(--color-gradient-start);
+    2px -2px 0 var(--color-gradient-mid),
+    -2px 2px 0 var(--color-gradient-start),
+    2px 2px 0 var(--color-gradient-start);
 }
 
 /* ===========================================================
@@ -61,12 +63,12 @@
 
     /* === EFEITO DE TEXTO HQ (Ajuste para Modo Escuro) === */
     /* No modo escuro, todos os títulos usam o contorno simples para máxima legibilidade. */
-    --text-outline-comics: 
+    --text-outline-comics:
       -2px -2px 0 var(--color-neutral-dark),
-       2px -2px 0 var(--color-neutral-dark),
-      -2px  2px 0 var(--color-neutral-dark),
-       2px  2px 0 var(--color-neutral-dark);
-    
+      2px -2px 0 var(--color-neutral-dark),
+      -2px 2px 0 var(--color-neutral-dark),
+      2px 2px 0 var(--color-neutral-dark);
+
     /* O efeito inset é sobrescrito para usar o contorno simples também */
     --text-outline-inset: var(--text-outline-comics);
   }
@@ -81,9 +83,9 @@
     background-color: var(--color-background);
     border-color: var(--color-accent);
   }
-  
+
   .top-bar-info {
-     background-color: var(--color-cta-hover);
+    background-color: var(--color-cta-hover);
   }
 }
 
@@ -101,16 +103,23 @@ body {
 
 /* --- Barra de Informações no Topo --- */
 .top-bar-info {
-  background-color: var(--color-accent); /* Cor de destaque para chamar atenção */
+  background-color: var(--color-accent);
+  /* Cor de destaque para chamar atenção */
   color: var(--color-neutral-light);
   font-family: var(--font-family-body);
   font-weight: bold;
   font-size: 0.9rem;
-  z-index: 1056; /* Garante que fique acima de outros elementos fixos do Bootstrap */
+  z-index: 1056;
+  /* Garante que fique acima de outros elementos fixos do Bootstrap */
 }
 
 /* --- Títulos --- */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family-headings);
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -120,19 +129,65 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3.5rem;
   color: var(--color-text-secondary);
-  text-shadow: var(--text-outline-comics); /* Contorno simples */
+  text-shadow: var(--text-outline-comics);
+  /* Contorno simples */
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--color-text-primary);
-  text-shadow: var(--text-outline-inset); /* Efeito Inset/Outset por padrão */
+  text-shadow: var(--text-outline-inset);
+  /* Efeito Inset/Outset por padrão */
 }
 
-h2 { font-size: 2.5rem; }
-h3 { font-size: 2rem; }
-h4 { font-size: 1.75rem; }
-h5 { font-size: 1.5rem; }
-h6 { font-size: 1.25rem; }
+h2 {
+  font-size: 3.5rem;
+}
+
+/* aumentei - RBNS 2025-06-24 */
+h3 {
+  font-size: 2.5rem;
+}
+
+/* aumentei - RBNS 2025-06-24 */
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+/* Classe para mudar o estilo do título da home - RBNS 2025-06-24 */
+.titulo-central-fatecon {
+  font-family: var(--font-family-headings);
+  font-size: 8rem;
+  color: var(--color-text-secondary);
+  text-shadow: var(--text-outline-comics);
+  text-align: center;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Responsividade para telas menores - RBNS 2025-06-24 */
+@media (max-width: 768px) {
+  .titulo-central-fatecon {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-central-fatecon {
+    font-size: 4rem;
+  }
+}
 
 
 /* --- Links --- */
@@ -142,6 +197,7 @@ a {
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
 a:hover {
   color: var(--color-accent);
   text-decoration: underline;
@@ -151,11 +207,13 @@ a:hover {
 .btn {
   display: inline-block;
   background-color: var(--color-accent);
-  color: var(--color-text-on-accent); /* Variável correta para texto sobre fundos de destaque */
+  color: var(--color-text-on-accent);
+  /* Variável correta para texto sobre fundos de destaque */
   font-family: var(--font-family-body);
   font-weight: bold;
   font-size: 1.125rem;
-  text-shadow: none; /* Botões ficam mais legíveis sem o contorno */
+  text-shadow: none;
+  /* Botões ficam mais legíveis sem o contorno */
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 8px;
@@ -164,6 +222,7 @@ a:hover {
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .btn:hover {
   background-color: var(--color-cta-hover);
   color: var(--color-text-on-accent);
@@ -172,8 +231,10 @@ a:hover {
 
 /* --- Cartão Temático --- */
 .card-fatecon {
-  background-color: rgba(255, 255, 255, 0.7); /* Padrão para Modo Claro */
-  border: 3px solid var(--color-text-secondary); /* Borda roxa no modo claro */
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Padrão para Modo Claro */
+  border: 3px solid var(--color-text-secondary);
+  /* Borda roxa no modo claro */
   border-radius: 12px;
   padding: 1.5rem;
   margin-top: 2rem;
@@ -182,49 +243,89 @@ a:hover {
 
 /* --- Barra de Navegação --- */
 .navbar-fatecon {
-  position: relative; /* Contexto para o posicionamento absoluto do brand */
-  background-color: var(--color-text-secondary); /* Padrão roxo para Modo Claro */
-  border-bottom: 4px solid var(--color-cta-hover); /* Borda laranja */
+  position: relative;
+  /* Contexto para o posicionamento absoluto do brand */
+  background-color: var(--color-text-secondary);
+  /* Padrão roxo para Modo Claro */
+  border-bottom: 4px solid var(--color-cta-hover);
+  /* Borda laranja */
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  min-height: 80px; /* Garante espaço vertical para o brand grande */
+  min-height: 80px;
+  /* Garante espaço vertical para o brand grande */
 }
 
 .navbar-fatecon .navbar-brand {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 5px; /* Ajuste para centralizar verticalmente */
+  top: 5px;
+  /* Ajuste para centralizar verticalmente */
 
-  font-family: var(--font-family-headings); /* Fonte de título para mais impacto */
-  font-size: 2.8rem; /* Aumenta o tamanho, mas ainda não tá bom, vu ter que fazer uma classe específica para esse elemento. Talvez icluindo outra fonte. Vou tirar do navbar també. @git-hubens */
+  font-family: var(--font-family-headings);
+  /* Fonte de título para mais impacto */
+  font-size: 2.8rem;
+  /* Aumenta o tamanho, mas ainda não tá bom, vou ter que fazer uma classe específica para esse elemento. Talvez icluindo outra fonte. Vou tirar do navbar também. @git-hubens */
   font-weight: bold;
-  color: var(--color-neutral-light); /* Cor clara */
-  opacity: 0.7; /* Efeito "clarinho" com transparência */
+  color: var(--color-neutral-light);
+  /* Cor clara */
+  opacity: 0.7;
+  /* Efeito "clarinho" com transparência */
   transition: opacity 0.3s ease;
-  text-shadow: none; /* Remove qualquer sombra de texto herdada */
+  text-shadow: none;
+  /* Remove qualquer sombra de texto herdada */
 }
 
 .navbar-fatecon .navbar-brand:hover {
-    opacity: 1; /* Opacidade total no hover */
+  opacity: 1;
+  /* Opacidade total no hover */
 }
 
 .navbar-fatecon .nav-link {
   font-family: var(--font-family-body);
   font-weight: bold;
-  color: var(--color-neutral-light); /* Texto claro na navbar roxa */
+  color: var(--color-neutral-light);
+  /* Texto claro na navbar roxa */
 }
 
 .navbar-fatecon .nav-link:hover {
   color: #ffffff;
 }
+
 .navbar-fatecon .nav-link.active {
-  color: var(--color-gradient-start); /* Destaque amarelo para o link ativo */
+  color: var(--color-gradient-start);
+  /* Destaque amarelo para o link ativo */
 }
+
 /* Ajusta a cor do ícone "sanduíche" em telas menores, embora ele não vá ser usado no projeto */
 .navbar-toggler {
   filter: invert(1);
 }
+
+/* Aumenta o tamanho e muda a cor dos links no NAV - RBNS 2025-06-24 */
+.nav-principal .nav-link {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-text-secondary) !important;
+}
+
+/* Aplica hover com cor de destaque para os links do NAV - RBNS 2025-06-24 */
+.nav-principal .nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+/* Ajusta também a cor dos ícones sociais - RBNS 2025-06-24 */
+.social-icons i {
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: var(--color-accent);
+}
+
+
 
 /* --- Bloco com Gradiente --- */
 .gradiente-tematico {
@@ -239,42 +340,510 @@ a:hover {
 
 /* --- Divisórias Temáticas --- */
 .hr-themed {
-    border: none;
-    height: 5px;
-    background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-mid), var(--color-gradient-end));
-    margin: 3rem 0;
+  border: none;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-mid), var(--color-gradient-end));
+  margin: 3rem 0;
 }
 
 /* --- Rodapé --- */
 .footer-themed {
-    background-color: var(--color-neutral-dark);
-    color: var(--color-neutral-light);
+  background-color: var(--color-neutral-dark);
+  color: var(--color-neutral-light);
 }
+
 .footer-themed a {
-    color: var(--color-link);
+  color: var(--color-link);
 }
+
 .footer-themed a:hover {
-    color: var(--color-neutral-light);
+  color: var(--color-neutral-light);
 }
 
 /* --- Classes de utilitário --- */
 .hero-unit {
-    background-color: var(--color-text-secondary);
-    color: var(--color-neutral-light);
+  background-color: var(--color-text-secondary);
+  color: var(--color-neutral-light);
 }
+
 .hero-unit h2 {
-    color: var(--color-neutral-light);
-    text-shadow: 
+  color: var(--color-neutral-light);
+  text-shadow:
     -2px -2px 0 var(--color-neutral-dark),
-     2px -2px 0 var(--color-neutral-dark),
-    -2px  2px 0 var(--color-neutral-dark),
-     2px  2px 0 var(--color-neutral-dark);
+    2px -2px 0 var(--color-neutral-dark),
+    -2px 2px 0 var(--color-neutral-dark),
+    2px 2px 0 var(--color-neutral-dark);
 }
+
 .hero-unit a.btn {
-    background-color: var(--color-neutral-light);
-    color: var(--color-neutral-dark);
-    text-shadow: none;
+  background-color: var(--color-neutral-light);
+  color: var(--color-neutral-dark);
+  text-shadow: none;
 }
+
 .hero-unit a.btn:hover {
-    background-color: var(--color-gradient-start);
+  background-color: var(--color-gradient-start);
 }
+
+/* INICIO - ElefantesMalhadosNaEstradaArcoIris */
+
+.brasital-section {
+  width: 100%;
+}
+
+.img-hero-deitado {
+  display: none;
+}
+
+.brasital-info {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.brasital-info-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.brasital-info-text {
+  position: absolute;
+  font-size: larger;
+  width: 50%;
+  background-color: rgb(0,0,0, 0.35);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.text-brasital {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 780px) {
+
+  .fatequinho-apresentacao {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brasital-info {
+    flex-direction: column;
+  }
+
+  .brasital-info-text {
+    width: 100%;
+    margin-top: 12px;
+    background-color: rgb(74, 67, 163, 1);
+  }
+
+  .brasital-info-text {
+    position: static;
+    font-size: 16px;
+  }
+
+  .texto-sobre-imagem {
+    width: 100%;
+    padding: 16px;
+    margin-top: 12px;
+    background-color: rgba(74, 67, 163, 1);
+    position: static;
+  }
+
+  .img-hero {
+    display: none;
+  }
+
+  .img-hero-deitado {
+    display: block;
+  }
+}
+
+/* INICIO - Estilo Modal  */
+
+.modal-list {
+  width: 100%;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 3px solid var(--color-text-secondary);
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.modal-list img {
+  width: 100%;
+}
+
+.modal-bg {
+  z-index: 1057;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+
+.modal-item {
+  position: relative;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  /* Aplica duas sombras (box-shadow) para dar profundidade: uma maior e mais suave, outra menor e mais escura */
+  width: 550px;
+  height: 550px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px;
+}
+
+.modal-artista-images {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 50%;
+}
+
+.artista-img {
+  height: 100%;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.modal-item-informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 50%;
+
+  p {
+    margin: 0px;
+    overflow-y: scroll;
+    height: 100%;
+    scrollbar-width: none;
+  }
+}
+
+.close-button {
+  position: absolute;
+  width: 32px;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.none {
+  opacity: 0%;
+}
+
+/* FIM - Estilo Modal  */
+
+/* INICIO - Quem Somos */
+
+.creator-main {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  padding: 0px 16px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-basis: content;
+  row-gap: 20px;
+  z-index: 1;
+  transition: .3 all ease;
+}
+
+/* card rafael */
+.creator-section-rafael {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  background: linear-gradient(285deg, rgba(190, 36, 129, 1) 0%, rgba(74, 67, 163, 1) 50%);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.creator-complete-info-rafael {
+  top: 0;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/assets/berserk.png");
+  background-color: #4A43A3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 8px;
+  border: 4px solid #4a43a3;
+  transition: all ease-in .3s;
+  width: 28%;
+  height: 100%;
+  left: 36%;
+}
+
+.creator-section-rafael:hover .creator-complete-info-rafael {
+  opacity: 1;
+  z-index: 2;
+}
+
+
+/* card vini */
+
+.creator-section-vini {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  background: linear-gradient(105deg, rgba(190, 36, 129, 1) 0%, rgba(74, 67, 163, 1) 50%);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.creator-complete-info-vini {
+  top: 0;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/assets/star-wars.jpg");
+  background-color: #4A43A3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 8px;
+  border: 4px solid #4a43a3;
+  transition: all ease-in .3s;
+  width: 28%;
+  height: 100%;
+  left: 36%;
+}
+
+.creator-section-vini:hover .creator-complete-info-vini {
+  opacity: 1;
+  z-index: 2;
+}
+
+.center {
+  width: 25%;
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+  color: #4a43a3;
+  text-transform: uppercase;
+  border: #4a43a3 2px solid;
+  border-radius: 8px;
+}
+
+.centralizador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  margin-top: 30px;
+  color: #4a43a3;
+}
+
+/* card davi */
+.creator-section-davi {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  background: linear-gradient(255deg, rgba(190, 36, 129, 1) 0%, rgba(74, 67, 163, 1) 50%);
+
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.creator-complete-info-davi {
+  top: 0;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/assets/desenhista.png");
+  background-color: #4A43A3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 8px;
+  border: 4px solid #4a43a3;
+  transition: all ease-in .3s;
+  width: 28%;
+  height: 100%;
+  left: 36%;
+}
+
+.creator-section-davi:hover .creator-complete-info-davi {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* card joao */
+.creator-section-joao {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  background: linear-gradient(75deg, rgba(190, 36, 129, 1) 0%, rgb(74, 67, 163) 50%);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.creator-complete-info-joao {
+  top: 0;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/assets/flamengo.jpg");
+  background-color: #4A43A3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 8px;
+  border: 4px solid #4a43a3;
+  transition: all ease-in .3s;
+  width: 28%;
+  height: 100%;
+  left: 36%;
+}
+
+.creator-section-joao:hover .creator-complete-info-joao {
+  opacity: 1;
+  z-index: 2;
+}
+
+.creator-infos {
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+}
+
+.creator-section-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.creator-image {
+  width: 220px;
+  border-radius: 50%;
+  padding: 16px;
+}
+
+.creator-complete-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #F8B20D;
+  padding: 8px;
+  border: 4px solid #4a43a3;
+  color: #4a43a3;
+  width: 28%;
+  height: 100%;
+  left: 36%;
+  z-index: 1;
+
+  p {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+
+.creator-complete-info h3 {
+  font-size: 32px;
+}
+
+/* style local e data */
+
+.page-localization {
+  display: flex;
+  width: 96%;
+  margin: 32px auto;
+}
+
+.page-localization-local {
+  display: flex;
+}
+
+.article-local {
+  width: 90%;
+  height: 450px;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2%;
+  margin: 1% 5%;
+  background: rgb(12, 9, 40);
+  background: linear-gradient(90deg, rgba(12, 9, 40, 1) 0%, rgba(93, 84, 209, 1) 100%);
+}
+
+
+.article-data {
+  width: 90%;
+  height: 600px;
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2% 0;
+  margin: 1% 5%;
+  background: rgb(12, 9, 40);
+  background: linear-gradient(90deg, rgba(12, 9, 40, 1) 0%, rgba(93, 84, 209, 1) 100%);
+}
+
+
+.aside-local {
+  width: 60%;
+  height: 1050px;
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2%;
+  margin: 0.5% 0% 0% 0%;
+  background: rgb(12, 9, 40);
+  background: linear-gradient(90deg, rgba(12, 9, 40, 1) 0%, rgba(93, 84, 209, 1) 100%);
+}
+
+/* INICIO - Quem Somos */
+
+
+/* FIM - ElefantesMalhadosNaEstradaArcoIris */
