@@ -31,12 +31,10 @@
 
 .memorias-sectionThree {
   display: flex;
-  gap: 12%;
+  gap: 4%;
 }
 
-.memorias-number-year,
-.memorias-number-year-2,
-.memorias-number-year-three {
+.memorias-number-year {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,10 +46,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   padding-bottom: 5%;
 }
-
-.memorias-sectionThree .memorias-number-year,
-.memorias-sectionTwo .memorias-number-year,
-.memorias-sectionTwo .memorias-number-year-2 {
+.memorias-sectionThree .memorias-number-year {
   justify-content: center;
   margin-left: 2%;
 }
@@ -164,3 +159,83 @@ img {
     min-height: auto;
   }
 } */
+
+.modal-list {
+	width: 100%;
+	display: grid;
+	gap: 8px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	border: 3px solid var(--color-text-secondary);
+  border-radius: 12px;
+	padding: 8px;
+}
+
+.modal-list img {
+	width: 100%;
+}
+
+.modal-bg {
+  z-index: 1057;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.3);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+
+.modal-item {
+	position: relative;
+	background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; /* Aplica duas sombras (box-shadow) para dar profundidade: uma maior e mais suave, outra menor e mais escura */
+	width: 550px;
+	height: 550px;
+	padding: 8px;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px;
+}
+
+.modal-artista-images {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 50%;
+}
+
+.artista-img {
+	height: 100%;
+	margin-right: 8px;
+  cursor: pointer;
+}
+
+.modal-item-informacoes {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+  height: 50%;
+
+  p {
+    margin: 0px;
+    overflow-y: scroll;
+    height: 100%;
+    scrollbar-width: none;
+  }
+}
+
+.close-button {
+	position: absolute;
+	width: 32px;
+	top: 8px;
+	right: 8px;
+	cursor: pointer;
+}
+
+.none {
+	opacity: 0%;
+}   
