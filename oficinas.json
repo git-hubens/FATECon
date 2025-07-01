@@ -1,0 +1,60 @@
+{
+    "oficinas": [
+        {
+            "oficinaID": 0,
+            "oficinaAtiva": false,
+            "oficinaNome": "oficina 1",
+            "oficinaDesc": "Descrição da oficina 1",
+            "oficinaDescCurta": "Descrição curta da oficina 1",
+            "oficinaLocal": "Localização da oficina 1",
+            "oficinaData": "2023-10-01",
+            "oficinaHora": "10:00",
+            "oficinaImagem": "https://placehold.co/1100x350"
+        },
+        {
+            "oficinaID": 1,
+            "oficinaAtiva": false,
+            "oficinaNome": "oficina 2",
+            "oficinaDesc": "Descrição da oficina 2",
+            "oficinaDescCurta": "Descrição curta da oficina 2",
+            "oficinaLocal": "Localização da oficina 2",
+            "oficinaData": "2023-12-02",
+            "oficinaHora": "12:00",
+            "oficinaImagem": "https://placehold.co/1100x350"
+        },
+        {
+            "oficinaID": 2,
+            "oficinaAtiva": false,
+            "oficinaNome": "oficina 3",
+            "oficinaDesc": "Descrição da oficina 3",
+            "oficinaDescCurta": "Descrição curta da oficina 3",
+            "oficinaLocal": "Localização da oficina 3",
+            "oficinaData": "2024-01-15",
+            "oficinaHora": "14:00",
+            "oficinaImagem": "https://placehold.co/1100x350"
+        },
+        {
+            "oficinaID": 3,
+            "oficinaAtiva": false,
+            "oficinaNome": "oficina 4",
+            "oficinaDesc": "Descrição da oficina 4",
+            "oficinaDescCurta": "Descrição curta da oficina 4",
+            "oficinaLocal": "Localização da oficina 4",
+            "oficinaData": "2024-02-20",
+            "oficinaHora": "16:00",
+            "oficinaImagem": "https://placehold.co/1100x350"
+        },
+        {
+            "oficinaID": 4,
+            "oficinaAtiva": false,
+            "oficinaNome": "oficina 5",
+            "oficinaDesc": "Descrição da oficina 5",
+            "oficinaDescCurta": "Descrição curta da oficina 5",
+            "oficinaLocal": "Localização da oficina 5",
+            "oficinaData": "2024-03-10",
+            "oficinaHora": "18:00",
+            "oficinaImagem": "https://placehold.co/1100x350"
+        }
+    ]
+}
+

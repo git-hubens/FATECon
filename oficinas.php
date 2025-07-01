@@ -1,7 +1,81 @@
+<?php
+session_start();
+if (!isset($_SESSION["json"])) {
+    $_SESSION["json"] = json_decode(file_get_contents('oficinas.json'), true);                  
+}
+
+//funções
+
+//Carrega a oficina na página, se ele não encontrar nenhum, ele devera listar a primeira da lista
+function carregaOficina($json){
+    foreach ($json["oficinas"] as $oficina) {
+        if ($oficina["oficinaAtiva"] === true) {
+            // Define a variável da oficina a ser mostrada
+            $_SESSION["oficinaID"] = $oficina["oficinaID"];
+            $_SESSION["oficinaNome"] = $oficina["oficinaNome"];
+            $_SESSION["oficinaDesc"] = $oficina["oficinaDesc"];
+            $_SESSION["oficinaLocal"] = $oficina["oficinaLocal"];
+            $_SESSION["oficinaData"] = $oficina["oficinaData"];
+            $_SESSION["oficinaHora"] = $oficina["oficinaHora"];
+            $_SESSION["oficinaImagem"] = $oficina["oficinaImagem"];
+        }
+        else{
+            // Se não encontrar nenhuma oficina ativa, pega a primeira da lista
+            $_SESSION["oficinaID"] = $json["oficinas"][0]["oficinaID"];
+            $_SESSION["oficinaNome"] = $json["oficinas"][0]["oficinaNome"];
+            $_SESSION["oficinaDesc"] = $json["oficinas"][0]["oficinaDesc"];
+            $_SESSION["oficinaLocal"] = $json["oficinas"][0]["oficinaLocal"];
+            $_SESSION["oficinaData"] = $json["oficinas"][0]["oficinaData"];
+            $_SESSION["oficinaHora"] = $json["oficinas"][0]["oficinaHora"];
+            $_SESSION["oficinaImagem"] = $json["oficinas"][0]["oficinaImagem"];
+        }
+    }
+}
+
+//essa função lista todas as outras oficinas que irão ocorrer
+function listaOficinas($json){
+    //a variavel $oficina recebe os dados do array $json
+    foreach ($json["oficinas"] as $oficina) {
+        //verifica se a oficina não está ativa
+        if ($oficina["oficinaAtiva"] == false && $oficina["oficinaID"] != $_SESSION["oficinaID"]) {
+            echo "<button type='submit' name='oficinaID' value='",$oficina['oficinaID'],"' class='btn m-1 p-0 col-sm-12 col-md-5 col-lg-4'>
+                <div class='card flex-grow-0 colorCardWorkshop'>
+                    <div class='row g-0'>
+                        <div class='col-4'>
+                            <img src='https://placehold.co/600' class='img-fluid rounded-start' alt='...'>
+                        </div>
+                        <div class='col-8'>
+                            <div class='card-body align-middle p-0'>
+                                <h5 class='card-title mt-2'>",$oficina['oficinaNome'],"</h5>
+                                <p class='card-text txtSize'>",$oficina['oficinaDescCurta'],"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </button>";
+        }  
+    }
+}
+carregaOficina($_SESSION["json"]);
+
+//verifica se a alguma requisição do método GET
+if ($_SERVER["REQUEST_METHOD"] == "GET"){
+    //quando há uma requisição do método get, ele pega os dados referente aquela oficina e envia para as 
+    //variáveis de sessão
+    $_SESSION["oficinaID"] = $_SESSION["json"]["oficinas"][$_GET["oficinaID"]]["oficinaID"];
+    $_SESSION["oficinaNome"] = $_SESSION["json"]["oficinas"][$_GET["oficinaID"]]["oficinaNome"];
+    $_SESSION["oficinaDesc"] = $_SESSION["json"]["oficinas"][$_GET["oficinaID"]]["oficinaDesc"];
+    $_SESSION["oficinaLocal"] = $_SESSION["json"]["oficinas"][$_GET["oficinaID"]]["oficinaLocal"];
+    $_SESSION["oficinaHora"] = $_SESSION["json"]["oficinas"][$_GET["oficinaID"]]["oficinaHora"];
+    $_SESSION["oficinaData"] = $_SESSION["json"]["oficinas"][$_GET["oficinaID"]]["oficinaData"];
+    $_SESSION["oficinaImagem"] = $_SESSION["json"]["oficinas"][$_GET["oficinaID"]]["oficinaImagem"];
+}
+?>
+
 <!doctype html>
 <html lang="pt-BR">
-
-<head>
+    
+    <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FATECon HQs 2025!</title>
@@ -71,71 +145,26 @@
 
 
             <main>
+                
                 <artice class="text-center">
-                    <h1>Título Oficina</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero soluta eius quae debitis
-                        molestiae fugit aliquid numquam, quos ullam dolorum tempora et rerum, totam obcaecati omnis nam
-                        veniam autem. Alias?</p>
+                    <h1><?php echo $_SESSION["oficinaNome"]?></h1>
+                    <p><?php echo $_SESSION["oficinaDesc"]?></p>
                     <figure class="text-center">
-                       <img class="img-fluid rounded my-2" src="https://placehold.co/1100x350" alt="PLACEHOLDER">
+                       <img class="img-fluid rounded my-2" src="<?php echo $_SESSION["oficinaImagem"]?>" alt="PLACEHOLDER">
                     </figure>
                     <div class="text-start">
                         <p>Ficou interessado? Então venha participar dessa oficina!</p>
                         <ul class="ms-2 list-unstyled">
-                            <li>Dia: 27 de setembro</li>
-                            <li>Horário: 12:00</li>
-                            <li>Local: Auditório</li>
+                            <li>Dia: <?php echo $_SESSION["oficinaData"]?></li>
+                            <li>Horário: <?php echo $_SESSION["oficinaHora"]?></li>
+                            <li>Local: <?php echo $_SESSION["oficinaLocal"]?></li>
                         </ul>
                     </div>
                 </artice>
-                <aside class="text-center row justify-content-around">
+                <form method="get" action="oficinas.php" class="text-center row justify-content-around">
                     <h2>Outras Oficinas</h2>
-                    <div class="my-2 col-sm-12 col-md-5 col-lg-4">
-                        <div class="card flex-grow-0 colorCardWorkshop">
-                            <div class="row g-0">
-                                <div class="col-4">
-                                    <img src="https://placehold.co/600" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body align-middle p-0">
-                                        <h5 class="card-title mt-2">Título Oficina</h5>
-                                        <p class="card-text txtSize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellat sunt</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="my-2 col-sm-12 col-md-5 col-lg-4">
-                        <div class="card flex-grow-0 colorCardWorkshop">
-                            <div class="row g-0">
-                                <div class="col-4">
-                                    <img src="https://placehold.co/600" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body align-middle p-0">
-                                        <h5 class="card-title mt-2">Título Oficina</h5>
-                                        <p class="card-text txtSize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellat sunt</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="my-2 col-sm-12 col-md-5 col-lg-4">
-                        <div class="card flex-grow-0 colorCardWorkshop">
-                            <div class="row g-0">
-                                <div class="col-4">
-                                    <img src="https://placehold.co/600" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body align-middle p-0">
-                                        <h5 class="card-title mt-2">Título Oficina</h5>
-                                        <p class="card-text txtSize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellat sunt</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+                    <?php listaOficinas($_SESSION["json"])?>
+                </form>
     </div>
 
 
