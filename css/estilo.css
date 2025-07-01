@@ -463,6 +463,14 @@ height: 50%;
 /* FIM - ElefantesMalhadosNaEstradaArcoIris */
 /* =======================Inicio Pirulitos Raivosos de Acucar e Mel======================= */
 
+.backgroundPirulitos{
+  background: linear-gradient(-140deg, #4A43A3  20%, #E31371 );
+}
+
+.backgroundPirulitos h1, h2, p{
+  color: #fff;
+}
+
 .txtSize {
   font-size: 1.2rem; /* Default size */
 }
