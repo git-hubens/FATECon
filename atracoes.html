@@ -62,36 +62,35 @@
         <main>
 <!-- INICIO - PirulitosDeAcucarEMel -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Seleciona todas as imagens com base na classe
-    const imagens = document.querySelectorAll("#oficinas img");
-
-    // Guarda as imagens originais (para reset automático no reload)
-    const imagensOriginais = [
-      "imgs/exemple01.png",
-      "imgs/exemple02.png",
-      "imgs/exemple03.png",
-    ];
-
-    // A posição 0 será sempre considerada como a "posição 01"
-    const posicaoPrincipal = imagens[0];
-
-    imagens.forEach((img, index) => {
-      img.addEventListener("click", () => {
-        // Se clicou na imagem principal (posição 01), não faz nada
-        if (index === 0) return;
-
-        // Troca os src das imagens
-        const srcPrincipal = posicaoPrincipal.src;
-        posicaoPrincipal.src = img.src;
-        img.src = srcPrincipal;
+  // Esta função assume que as imagens estão dentro de um elemento com id informado
+  function alterarImg(oficinaID) {
+    document.addEventListener("DOMContentLoaded", () => {
+      // Seleciona todas as imagens com base na classe
+      const imagens = document.querySelectorAll(`#${oficinaID} img`);
+  
+      // A posição 0 será sempre considerada como a "posição 01"
+      const posicaoPrincipal = imagens[0];
+  
+      imagens.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          // Se clicou na imagem principal (posição 01), não faz nada
+          if (index === 0) return;
+  
+          // Troca os src das imagens
+          const srcPrincipal = posicaoPrincipal.src;
+          posicaoPrincipal.src = img.src;
+          img.src = srcPrincipal;
+        });
       });
     });
-  });
+  };
+
+  alterarImg("oficinas01");
+
 </script>
 
-<section id="oficinas">
-  <h2 class="text-center">ATRAÇÕES</h2>
+<section >
+  <h1 class="text-center">ATRAÇÕES</h1>
   <p class="text-center">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
     perspiciatis quam doloremque! Labore, reprehenderit fugit? Dolores nobis
@@ -99,14 +98,14 @@
     labore quasi libero quo.
   </p>
 
-  <div class="row">
+  <div class="row" id="oficinas01">
     <div
       class="col-md-6 col-sm-12 d-flex justify-content-center"
     >
       <figure class="figure">
         <img
           src="img/exemple01.png"
-          class="figure-img img-fluid rounded img-hover-effect"
+          class="figure-img img-fluid rounded"
           alt="placehold"
         />
       </figure>
@@ -149,6 +148,7 @@
       </div>
     </div>
   </div>
+
 </section>
 
 <!-- FIM - PirulitosDeAcucarEMel -->
